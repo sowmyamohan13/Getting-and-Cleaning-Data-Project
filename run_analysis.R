@@ -67,4 +67,4 @@ final_dataset <-tidy_dataset %>%
   summarise_all(funs(mean))
 
 ##Write the final dataset to a csv file
-write.csv(final_dataset, "FinalData.csv")
+write.table(final_dataset, "FinalData.txt",row.name=FALSE)

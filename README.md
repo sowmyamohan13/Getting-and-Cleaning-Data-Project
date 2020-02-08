@@ -1,4 +1,3 @@
-
 The Human Activity recognition dataset includes the following files:
 
 - CodeBook.md : a code book that describes the variables, the data, and any transformations or work that we performed to clean up the data
@@ -10,7 +9,7 @@ The Human Activity recognition dataset includes the following files:
    4. Appropriately labels the data set with descriptive variable names.
    5. From the data set in step 4, creates a second, independent tidy data set with the average of         each variable for each activity and each subject.
 
-- FinalData.csv : the exported final data set that we got after following the above steps
+- FinalData.txt : the exported final data set that we got after following the above steps
 
 The following files from the initial dataset is used:
 

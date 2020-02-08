@@ -54,4 +54,4 @@ Entire numbers in code column of the tidy_dataset is replaced with corresponding
 **Step 5: Create tidy data set with average of each variable, by activity, by subject**
 The final data final_dataset (180 rows, 88 columns) is created by sumarizing tidy_dataset by taking the average of each variable for each activity and each subject, after grouped by subject and activity.
 
-Export final_dataset into FinalData.csv file.
+Export final_dataset into FinalData.txt file.
