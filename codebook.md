@@ -31,26 +31,27 @@ contains recorded features train data
 contains train data of activities’code labels
 
 **Step 1: Merge training and test sets to create one data set**
-x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
-y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function
-subject (10299 rows, 1 column) is created by merging subject_train and subject_test using rbind() function
-merged_dataset (10299 rows, 563 column) is created by merging Subject, Y and X using cbind() function
+- x (10299 rows, 561 columns) is created by merging x_train and x_test using rbind() function
+- y (10299 rows, 1 column) is created by merging y_train and y_test using rbind() function
+- subject (10299 rows, 1 column) is created by merging subject_train and subject_test using rbind() function
+- merged_dataset (10299 rows, 563 column) is created by merging Subject, Y and X using cbind() function
 
 **Step 2: Extract only measurements on mean and standard deviation**
-tidy_dataset (10299 rows, 88 columns) is created by subsetting merged_dataset , selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
+A clean dataset tidy_dataset (10299 rows, 88 columns) is created by subsetting merged_dataset by selecting only columns: subject, code and the measurements on the mean and standard deviation (std) for each measurement
 
 **Step 3: Use descriptive activities names for activity measurements**
-Entire numbers in code column of the tidy_dataset replaced with corresponding activity taken from second column of the activities variable
+Entire numbers in code column of the tidy_dataset is replaced with corresponding activity taken from second column of the activities variable
 
 **Step 4: Appropriately Label the Dataset with Descriptive Variable Names**
-code column in tidy_dataset renamed into activities
-All Acc in column’s name replaced by Accelerometer
-All Gyro in column’s name replaced by Gyroscope
-All BodyBody in column’s name replaced by Body
-All Mag in column’s name replaced by Magnitude
-All start with character f in column’s name replaced by Frequency
-All start with character t in column’s name replaced by Time
+- code column in tidy_dataset renamed into activities
+- All Acc in column’s name replaced by Accelerometer
+- All Gyro in column’s name replaced by Gyroscope
+- All BodyBody in column’s name replaced by Body
+- All Mag in column’s name replaced by Magnitude
+- All start with character f in column’s name replaced by Frequency
+- All start with character t in column’s name replaced by Time
 
 **Step 5: Create tidy data set with average of each variable, by activity, by subject**
-final_dataset (180 rows, 88 columns) is created by sumarizing tidy_dataset taking the means of each variable for each activity and each subject, after grouped by subject and activity.
+The final data final_dataset (180 rows, 88 columns) is created by sumarizing tidy_dataset by taking the average of each variable for each activity and each subject, after grouped by subject and activity.
+
 Export final_dataset into FinalData.csv file.
